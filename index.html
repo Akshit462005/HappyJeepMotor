@@ -41,14 +41,14 @@
 <body class="bg-stormBg text-gray-800 antialiased selection:bg-stormAccent selection:text-white">
 
     <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-black text-gray-400 text-xs py-2 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2">
-            <div class="flex items-center gap-4">
+    <div class="bg-black text-gray-400 text-[10px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-1.5 sm:gap-2">
+            <div class="flex items-center gap-2 sm:gap-4">
                 <span><i class="fa-solid font-bold text-stormAccent fa-location-dot mr-1"></i> Mandi Dabwali, Punjab, India</span>
                 <span class="hidden md:inline">|</span>
                 <span class="hidden md:inline"><i class="fa-solid font-bold text-stormAccent fa-globe mr-1"></i> Worldwide Export Available</span>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 sm:gap-4">
                 <a href="tel:9914234807" class="hover:text-white transition-colors"><i class="fa-solid text-stormAccent fa-phone mr-1"></i> +91 99142 34807</a>
                 <a href="https://wa.me/919914234807" target="_blank" class=" font-semibold hover:underline"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Inquiry</a>
             </div>
@@ -58,15 +58,15 @@
     <!-- MAIN NAVIGATION BAR (STORM JEEPS STYLE) -->
     <header class="sticky top-0 z-50 bg-stormHeader text-white shadow-xl border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between h-14 sm:h-20">
                 <!-- Brand Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-[72px] h-[72px] -my-2.5 bg-transparent flex items-center justify-center overflow-hidden">
+                    <div class="w-11 h-11 -my-1 sm:w-[72px] sm:h-[72px] sm:-my-2.5 bg-transparent flex items-center justify-center overflow-hidden">
                         <img src="./logo.png" alt="Happy Jeep Motors logo" class="h-full w-full object-contain">
                     </div>
                     <div>
-                        <span class="font-heading font-bold text-2xl tracking-wider block text-white group-hover:text-stormAccent transition-colors">HAPPY JEEP MOTORS</span>
-                        <span class="text-[10px] tracking-widest text-gray-400 block -mt-1 uppercase">Custom Builds & Export</span>
+                        <span class="font-heading font-bold text-sm sm:text-2xl tracking-wider block text-white group-hover:text-stormAccent transition-colors">HAPPY JEEP MOTORS</span>
+                        <span class="text-[8px] sm:text-[10px] tracking-widest text-gray-400 block -mt-1 uppercase">Custom Builds & Export</span>
                     </div>
                 </a>
 
@@ -88,45 +88,45 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden text-2xl text-white focus:outline-none">
+                <button id="mobile-menu-btn" class="lg:hidden text-lg text-white focus:outline-none">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-stormDark border-b border-gray-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#home" class="block py-2 text-stormAccent font-heading text-lg">Home</a>
-            <a href="#about" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">About Us</a>
-            <a href="#process" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">The Process</a>
-            <a href="#showcase" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">Showcase</a>
-            <a href="#instagram" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">Instagram</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">Contact Us</a>
-            <a href="#contact" class="block w-full text-center bg-stormAccent text-black font-heading font-bold py-3 mt-4">INQUIRE NOW</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-stormDark border-b border-gray-800 px-4 pt-1.5 pb-4 space-y-1.5">
+            <a href="#home" class="block py-1.5 text-stormAccent font-heading text-base">Home</a>
+            <a href="#about" class="block py-1.5 text-gray-300 hover:text-white font-heading text-base">About Us</a>
+            <a href="#process" class="block py-1.5 text-gray-300 hover:text-white font-heading text-base">The Process</a>
+            <a href="#showcase" class="block py-1.5 text-gray-300 hover:text-white font-heading text-base">Showcase</a>
+            <a href="#instagram" class="block py-1.5 text-gray-300 hover:text-white font-heading text-base">Instagram</a>
+            <a href="#contact" class="block py-1.5 text-gray-300 hover:text-white font-heading text-base">Contact Us</a>
+            <a href="#contact" class="block w-full text-center bg-stormAccent text-black font-heading font-bold py-2.5 mt-3 text-sm">INQUIRE NOW</a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="relative bg-stormDark text-white overflow-hidden py-24 lg:py-32">
+    <section id="home" class="relative bg-stormDark text-white overflow-hidden py-14 sm:py-24 lg:py-32">
         <div data-random-jeep-background class="absolute inset-0 z-0 opacity-50 bg-cover bg-center transition-opacity duration-[1200ms]" style="background-image: url('./Jeep%20(1).jpeg');"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-stormDark/70 via-stormDark/50 to-transparent z-0"></div>
         
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl">
-                <span class="inline-block bg-stormAccent text-black font-heading text-xs font-bold px-3 py-1 mb-4 uppercase tracking-widest">
+            <div class="max-w-2xl pt-[300px] sm:pt-0">
+                <span class="inline-block bg-stormAccent text-black font-heading text-[8px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 mb-2.5 sm:mb-4 uppercase tracking-widest">
                     Introducing a New Concept in Custom Jeep Builds
                 </span>
-                <h1 class="font-heading text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-none">
+                <h1 class="font-heading text-2xl sm:text-6xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-[.95] sm:leading-none">
                     ENGINEERING CUSTOM LEGENDS. <span class="text-stormAccent">SHIPPED WORLDWIDE.</span>
                 </h1>
-                <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                <p class="text-gray-300 text-sm sm:text-lg mb-5 sm:mb-8 leading-6 sm:leading-relaxed">
                     From the heart of Mandi Dabwali, Punjab, Happy Jeep Motors delivers exceptional custom Jeep conversions—balancing extreme off-road power with class, elegance, and bespoke styling.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#showcase" class="bg-stormAccent hover:bg-white text-white font-heading font-bold px-8 py-4 text-center tracking-wider transition-all">
+                <div class="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
+                    <a href="#showcase" class="bg-stormAccent hover:bg-white text-white font-heading font-bold px-4 sm:px-8 py-3 sm:py-4 text-xs sm:text-base text-center tracking-wider transition-all">
                         EXPLORE PREVIOUS BUILDS
                     </a>
-                    <a href="#about" class="border border-white/30 hover:border-white text-white font-heading font-bold px-8 py-4 text-center tracking-wider hover:bg-white/10 transition-all">
+                    <a href="#about" class="border border-white/30 hover:border-white text-white font-heading font-bold px-4 sm:px-8 py-3 sm:py-4 text-xs sm:text-base text-center tracking-wider hover:bg-white/10 transition-all">
                         THE HAPPY JEEP STORY
                     </a>
                 </div>
