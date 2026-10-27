@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Jeep Motors | Custom Modified Jeeps & Worldwide Export</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Oswald & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stormDark: '#121315',
+                        stormHeader: '#1A1C1E',
+                        stormAccent: '#99582a',
+                        stormRed: '#D32F2F',
+                        stormBg: '#F5F6F8',
+                        stormBorder: '#E1E4E8'
+                    },
+                    fontFamily: {
+                        heading: ['Oswald', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        .clip-slant { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    </style>
+</head>
+<body class="bg-stormBg text-gray-800 antialiased selection:bg-stormAccent selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-black text-gray-400 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid font-bold text-stormAccent fa-location-dot mr-1"></i> Mandi Dabwali, Punjab, India</span>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fa-solid font-bold text-stormAccent fa-globe mr-1"></i> Worldwide Export Available</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:9914234807" class="hover:text-white transition-colors"><i class="fa-solid text-stormAccent fa-phone mr-1"></i> +91 99142 34807</a>
+                <a href="https://wa.me/919914234807" target="_blank" class=" font-semibold hover:underline"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Inquiry</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR (STORM JEEPS STYLE) -->
+    <header class="sticky top-0 z-50 bg-stormHeader text-white shadow-xl border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-[72px] h-[72px] -my-2.5 bg-transparent flex items-center justify-center overflow-hidden">
+                        <img src="./logo.png" alt="Happy Jeep Motors logo" class="h-full w-full object-contain">
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-2xl tracking-wider block text-white group-hover:text-stormAccent transition-colors">HAPPY JEEP MOTORS</span>
+                        <span class="text-[10px] tracking-widest text-gray-400 block -mt-1 uppercase">Custom Builds & Export</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Nav -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
+                    <a href="#home" class="text-stormAccent hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-stormAccent transition-colors">About Us</a>
+                    <a href="#process" class="text-gray-300 hover:text-stormAccent transition-colors">The Process</a>
+                    <a href="#showcase" class="text-gray-300 hover:text-stormAccent transition-colors">Showcase</a>
+                    <a href="#instagram" class="text-gray-300 hover:text-stormAccent transition-colors">Instagram</a>
+                    <a href="#contact" class="text-gray-300 hover:text-stormAccent transition-colors">Contact</a>
+                </nav>
+
+                <!-- Call to action button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="#contact" class="bg-stormAccent hover:bg-white hover:text-black text-white font-heading font-bold py-2.5 px-6 tracking-wider text-sm transition-all duration-300">
+                        BUILD YOUR JEEP
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-2xl text-white focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-stormDark border-b border-gray-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-stormAccent font-heading text-lg">Home</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">About Us</a>
+            <a href="#process" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">The Process</a>
+            <a href="#showcase" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">Showcase</a>
+            <a href="#instagram" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">Instagram</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-white font-heading text-lg">Contact Us</a>
+            <a href="#contact" class="block w-full text-center bg-stormAccent text-black font-heading font-bold py-3 mt-4">INQUIRE NOW</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-stormDark text-white overflow-hidden py-24 lg:py-32">
+        <div data-random-jeep-background class="absolute inset-0 z-0 opacity-50 bg-cover bg-center transition-opacity duration-[1200ms]" style="background-image: url('./Jeep%20(1).jpeg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-stormDark/70 via-stormDark/50 to-transparent z-0"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+                <span class="inline-block bg-stormAccent text-black font-heading text-xs font-bold px-3 py-1 mb-4 uppercase tracking-widest">
+                    Introducing a New Concept in Custom Jeep Builds
+                </span>
+                <h1 class="font-heading text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-none">
+                    ENGINEERING CUSTOM LEGENDS. <span class="text-stormAccent">SHIPPED WORLDWIDE.</span>
+                </h1>
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                    From the heart of Mandi Dabwali, Punjab, Happy Jeep Motors delivers exceptional custom Jeep conversions—balancing extreme off-road power with class, elegance, and bespoke styling.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#showcase" class="bg-stormAccent hover:bg-white text-white font-heading font-bold px-8 py-4 text-center tracking-wider transition-all">
+                        EXPLORE PREVIOUS BUILDS
+                    </a>
+                    <a href="#about" class="border border-white/30 hover:border-white text-white font-heading font-bold px-8 py-4 text-center tracking-wider hover:bg-white/10 transition-all">
+                        THE HAPPY JEEP STORY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION (STORM JEEPS CONCEPT) -->
+    <section id="about" class="py-20 bg-white border-b border-stormBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-heading text-3xl sm:text-5xl text-stormDark font-bold mb-6">
+                        WHY SETTLE WITH STANDARD, WHEN YOU WERE BORN TO STAND OUT?
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        We are a passionate team of master technicians and automotive craftspeople based in Mandi Dabwali, Punjab. With years of hands-on expertise, we transform classic Willys, Mahindra Thar, and custom 4x4 rigs into bespoke masterpieces built to handle any terrain across the globe.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Our clients have complete freedom to design a totally unique Jeep that fits their personal lifestyle, or choose from one of our signature previous conversion builds for worldwide export.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4 border-t border-gray-200">
+                        <div>
+                            <span class="block font-heading text-3xl font-bold text-stormAccent">100%</span>
+                            <span class="text-xs text-gray-500 uppercase font-bold">Custom Engineered</span>
+                        </div>
+                        <div>
+                            <span class="block font-heading text-3xl font-bold text-stormAccent">GLOBAL</span>
+                            <span class="text-xs text-gray-500 uppercase font-bold">Export Capability</span>
+                        </div>
+                        <div>
+                            <span class="block font-heading text-3xl font-bold text-stormAccent">DABWALI</span>
+                            <span class="text-xs text-gray-500 uppercase font-bold">Heritage Craft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Showcase Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <img data-random-jeep src="./Jeep%20(2).jpeg" alt="Custom Jeep Front" class="w-full h-64 object-cover shadow-lg border border-gray-200">
+                    <img data-random-jeep src="./Jeep%20(3).jpeg" alt="Off-Road Performance" class="w-full h-64 object-cover shadow-lg border border-gray-200 mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROCESS (3 CUSTOM BUILD OPTIONS) -->
+    <section id="process" class="py-20 bg-stormBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-heading text-stormAccent font-bold tracking-widest text-sm uppercase">How We Work</span>
+                <h2 class="font-heading text-4xl sm:text-5xl font-bold text-stormDark mt-2">THE BUILD PROCESS</h2>
+                <div class="w-16 h-1 bg-stormAccent mx-auto mt-4"></div>
+                <p class="text-gray-600 mt-4">Whether you are designing a custom Jeep from scratch or modifying your current vehicle, we offer three custom build pathways to suit all preferences and international locations.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Option 1 -->
+                <div class="bg-white p-8 border border-stormBorder shadow-sm relative group hover:border-stormDark transition-all">
+                    <div class="w-12 h-12 bg-stormDark text-stormAccent font-heading font-bold text-xl flex items-center justify-center mb-6">01</div>
+                    <h3 class="font-heading text-xl font-bold text-stormDark mb-3">COMPLETE BRAND NEW BUILD</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">A fully bespoke Jeep crafted from the ground up at our Mandi Dabwali workshop, tailored directly to your exact specifications, paint scheme, interior finish, and power requirements.</p>
+                    <span class="text-xs font-bold text-stormAccent uppercase tracking-widest block">Turnkey & Ready to Export</span>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="bg-white p-8 border border-stormBorder shadow-sm relative group hover:border-stormDark transition-all">
+                    <div class="w-12 h-12 bg-stormDark text-stormAccent font-heading font-bold text-xl flex items-center justify-center mb-6">02</div>
+                    <h3 class="font-heading text-xl font-bold text-stormDark mb-3">BRING YOUR OWN JEEP</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Bring or ship your existing vehicle to our workshop. Our team will perform complete metal restoration, suspension lifts, custom engine tuning, and premium interior transformations.</p>
+                    <span class="text-xs font-bold text-stormAccent uppercase tracking-widest block">Delivery & Pickup Available</span>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="bg-white p-8 border border-stormBorder shadow-sm relative group hover:border-stormDark transition-all">
+                    <div class="w-12 h-12 bg-stormDark text-stormAccent font-heading font-bold text-xl flex items-center justify-center mb-6">03</div>
+                    <h3 class="font-heading text-xl font-bold text-stormDark mb-3">PARTS & CUSTOM KITS EXPORT</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">For international enthusiasts building their own rigs. We package and ship high-grade custom bumpers, alloy wheels, roll cages, leather seating, and body kits directly to your doorstep worldwide.</p>
+                    <span class="text-xs font-bold text-stormAccent uppercase tracking-widest block">Full Support Included</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE OF PREVIOUS BUILDS -->
+    <section id="showcase" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="font-heading text-stormAccent font-bold tracking-widest text-sm uppercase">Ignite Your Imagination</span>
+                    <h2 class="font-heading text-4xl sm:text-5xl font-bold text-stormDark mt-1">SHOWCASE OF PREVIOUS BUILDS</h2>
+                </div>
+                <div class="mt-4 md:mt-0 flex gap-2">
+                    <button class="px-4 py-2 border border-stormDark bg-stormDark text-white text-xs font-heading font-bold uppercase tracking-wider">All Builds</button>
+                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-xs font-heading font-bold uppercase tracking-wider hover:border-stormDark">Jeep Modifications</button>
+                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-xs font-heading font-bold uppercase tracking-wider hover:border-stormDark">Classic Willys</button>
+                </div>
+            </div>
+
+            <!-- Build Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Build Card 1 -->
+                <div class="border border-stormBorder bg-white group overflow-hidden">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img data-random-jeep src="./Jeep%20(4).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HAPPY-01 Thar Beast">
+                        <span class="absolute top-4 left-4 bg-black text-white text-xs font-heading px-3 py-1 uppercase tracking-wider">HAPPY-01</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-stormDark">HAPPY-01, MATTE JEEP BEASTs</h3>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Features We provide:</p>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Off-Road Lift Kit | Custom Leather | 4x4 Setup</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400">Export Ready</span>
+                            <a href="https://wa.me/919914234807?text=Inquiry%20about%20HAPPY-01%20Build" target="_blank" class="text-stormDark font-heading text-sm font-bold hover:text-stormAccent">INQUIRE BUILD <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Card 2 -->
+                <div class="border border-stormBorder bg-white group overflow-hidden">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img data-random-jeep src="./Jeep%20(5).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HAPPY-02 Vintage Willys">
+                        <span class="absolute top-4 left-4 bg-black text-white text-xs font-heading px-3 py-1 uppercase tracking-wider">HAPPY-02</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-stormDark">HAPPY-02, VINTAGE WILLYS RESTOMOD</h3>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Features We provide:</p>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Open-Top Classic | Desert Sand Paint | Power Steering</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400">Export Ready</span>
+                            <a href="https://wa.me/919914234807?text=Inquiry%20about%20HAPPY-02%20Build" target="_blank" class="text-stormDark font-heading text-sm font-bold hover:text-stormAccent">INQUIRE BUILD <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Card 3 -->
+                <div class="border border-stormBorder bg-white group overflow-hidden">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img data-random-jeep src="./Jeep%20(6).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HAPPY-03 Extreme Armored">
+                        <span class="absolute top-4 left-4 bg-black text-white text-xs font-heading px-3 py-1 uppercase tracking-wider">HAPPY-03</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-stormDark">HAPPY-03, RUBICON STYLE EXTREME</h3>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Features We provide:</p>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Heavy Duty Winch | LED Light Bars | Custom Wheels</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400">Export Ready</span>
+                            <a href="https://wa.me/919914234807?text=Inquiry%20about%20HAPPY-03%20Build" target="_blank" class="text-stormDark font-heading text-sm font-bold hover:text-stormAccent">INQUIRE BUILD <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Card 4 -->
+                <div class="border border-stormBorder bg-white group overflow-hidden">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img data-random-jeep src="./Jeep%20(11).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HAPPY-04 Desert Edition">
+                        <span class="absolute top-4 left-4 bg-black text-white text-xs font-heading px-3 py-1 uppercase tracking-wider">HAPPY-04</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-stormDark">HAPPY-04, DESERT EDITION</h3>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Features We provide:</p>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Sand Paint | Long Travel Suspension | Alloy Wheels</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400">Export Ready</span>
+                            <a href="https://wa.me/919914234807?text=Inquiry%20about%20HAPPY-04%20Build" target="_blank" class="text-stormDark font-heading text-sm font-bold hover:text-stormAccent">INQUIRE BUILD <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Card 5 -->
+                <div class="border border-stormBorder bg-white group overflow-hidden">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img data-random-jeep src="./Jeep%20(12).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HAPPY-05 Heritage Classic">
+                        <span class="absolute top-4 left-4 bg-black text-white text-xs font-heading px-3 py-1 uppercase tracking-wider">HAPPY-05</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-stormDark">HAPPY-05, HERITAGE CLASSIC</h3>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Features We provide:</p>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Open Top | Hand-Stitched Interior | Classic Chrome</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400">Export Ready</span>
+                            <a href="https://wa.me/919914234807?text=Inquiry%20about%20HAPPY-05%20Build" target="_blank" class="text-stormDark font-heading text-sm font-bold hover:text-stormAccent">INQUIRE BUILD <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Card 6 -->
+                <div class="border border-stormBorder bg-white group overflow-hidden">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img data-random-jeep src="./Jeep%20(13).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HAPPY-06 Trail Master">
+                        <span class="absolute top-4 left-4 bg-black text-white text-xs font-heading px-3 py-1 uppercase tracking-wider">HAPPY-06</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-stormDark">HAPPY-06, TRAIL MASTER</h3>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Features We provide:</p>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Winch Setup | LED Light Bar | Premium Bucket Seats</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400">Export Ready</span>
+                            <a href="https://wa.me/919914234807?text=Inquiry%20about%20HAPPY-06%20Build" target="_blank" class="text-stormDark font-heading text-sm font-bold hover:text-stormAccent">INQUIRE BUILD <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM EMBED & SOCIAL SECTION -->
+    <section id="instagram" class="py-20 bg-stormDark text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="font-heading text-stormAccent font-bold tracking-widest text-sm uppercase">Live From The Workshop</span>
+            <h2 class="font-heading text-4xl sm:text-5xl font-bold mt-2 mb-4">FOLLOW US ON INSTAGRAM</h2>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">Check out our latest build updates, behind-the-scenes metalwork, and delivery dispatches live on <a href="https://www.instagram.com/happy_jeep_motors/" target="_blank" class="text-stormAccent underline font-bold">@happy_jeep_motors</a></p>
+
+            <a href="https://www.instagram.com/happy_jeep_motors/" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-pink-600 to-[#fefae0] hover:opacity-90 text-white font-heading font-bold px-8 py-4 text-sm tracking-wider uppercase transition-all mb-12">
+                <i class="fa-brands fa-instagram text-xl"></i> Visit Official Instagram Page
+            </a>
+
+            <!-- Instagram Grid Mockup / Embed Preview -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://www.instagram.com/happy_jeep_motors/" target="_blank" class="relative group aspect-square overflow-hidden bg-gray-900 border border-gray-800">
+                    <img data-random-jeep src="./Jeep%20(7).jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Instagram Post">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                        <i class="fa-brands fa-instagram text-3xl text-white"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/happy_jeep_motors/" target="_blank" class="relative group aspect-square overflow-hidden bg-gray-900 border border-gray-800">
+                    <img data-random-jeep src="./Jeep%20(8).jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Instagram Post">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                        <i class="fa-brands fa-instagram text-3xl text-white"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/happy_jeep_motors/" target="_blank" class="relative group aspect-square overflow-hidden bg-gray-900 border border-gray-800">
+                    <img data-random-jeep src="./Jeep%20(9).jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Instagram Post">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                        <i class="fa-brands fa-instagram text-3xl text-white"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/happy_jeep_motors/" target="_blank" class="relative group aspect-square overflow-hidden bg-gray-900 border border-gray-800">
+                    <img data-random-jeep src="./Jeep%20(10).jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Instagram Post">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                        <i class="fa-brands fa-instagram text-3xl text-white"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION (STORM JEEPS STYLE) -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Details -->
+                <div>
+                    <span class="font-heading text-stormAccent font-bold tracking-widest text-sm uppercase">Get In Touch</span>
+                    <h2 class="font-heading text-4xl font-bold text-stormDark mt-1 mb-6">START YOUR JOURNEY WITH HAPPY JEEP MOTORS TODAY</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Please don't hesitate to contact our expert team with any inquiries or custom modification requests. We ship across India and export worldwide.
+                    </p>
+
+                    <div class="space-y-6 text-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-stormDark text-stormAccent flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-gray-400 uppercase">Telephone / Phone</span>
+                                <a href="tel:9914234807" class="text-lg font-heading font-bold text-stormDark hover:text-stormAccent">+91 99142 34807</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-stormDark text-stormAccent flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-gray-400 uppercase">Workshop & Showroom Address</span>
+                                <p class="text-base text-stormDark font-semibold">Happy Jeep Motors, Mandi Dabwali, Punjab, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-stormDark text-stormAccent flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-gray-400 uppercase">Operating Hours</span>
+                                <p class="text-gray-700">Monday – Saturday: 9:00am – 7:30pm</p>
+                                <p class="text-gray-500 text-xs">Sunday: By Appointment Only</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="bg-stormBg p-8 border border-stormBorder">
+                    <h3 class="font-heading text-2xl font-bold text-stormDark mb-6">SEND AN INQUIRY</h3>
+                    <form onsubmit="alert('Thank you for your inquiry! Happy Jeep Motors will contact you shortly.'); return false;" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Your Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-white border border-gray-300 focus:outline-none focus:border-stormDark text-sm">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Phone Number *</label>
+                                <input type="tel" required class="w-full px-4 py-3 bg-white border border-gray-300 focus:outline-none focus:border-stormDark text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Destination Country</label>
+                                <input type="text" placeholder="e.g. UK, USA, India" class="w-full px-4 py-3 bg-white border border-gray-300 focus:outline-none focus:border-stormDark text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Your Message / Customization Details *</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 bg-white border border-gray-300 focus:outline-none focus:border-stormDark text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-stormDark hover:bg-stormAccent hover:text-black text-white font-heading font-bold py-4 text-sm tracking-wider uppercase transition-all">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stormHeader text-gray-400 py-12 border-t border-gray-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <div class="flex items-center gap-3">
+                    <img src="./logo.png" alt="Happy Jeep Motors logo" class="h-10 w-10 object-contain">
+                    <span class="font-heading text-xl text-white font-bold tracking-wider">HAPPY JEEP MOTORS</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Mandi Dabwali, Punjab, India | Phone: +91 99142 34807</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="https://www.instagram.com/happy_jeep_motors/" target="_blank" class="hover:text-white"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="https://wa.me/919914234807" target="_blank" class="hover:text-white"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                <a href="tel:9914234807" class="hover:text-white"><i class="fa-solid fa-phone text-xl"></i></a>
+            </div>
+            <p class="text-xs text-gray-500">© Happy Jeep Motors. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu toggle -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const jeepImages = Array.from({ length: 70 }, (_, index) => `./Jeep%20(${index + 1}).jpeg`);
+        const shuffledImages = [...jeepImages].sort(() => Math.random() - 0.5);
+        const randomJeepImages = document.querySelectorAll('[data-random-jeep]');
+        const randomJeepBackground = document.querySelector('[data-random-jeep-background]');
+
+        randomJeepImages.forEach((image, index) => {
+            image.src = shuffledImages[index];
+        });
+
+        if (randomJeepBackground) {
+            let heroImageIndex = randomJeepImages.length;
+            randomJeepBackground.style.backgroundImage = `url("${shuffledImages[heroImageIndex]}")`;
+
+            setInterval(() => {
+                randomJeepBackground.style.opacity = '0';
+
+                setTimeout(() => {
+                    heroImageIndex = (heroImageIndex + 1) % shuffledImages.length;
+                    randomJeepBackground.style.backgroundImage = `url("${shuffledImages[heroImageIndex]}")`;
+                    randomJeepBackground.style.opacity = '0.5';
+                }, 1200);
+            }, 10000);
+        }
+    </script>
+</body>
+</html>
